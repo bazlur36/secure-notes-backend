@@ -5,7 +5,7 @@ A REST API for a note-taking platform with JWT authentication, role-based access
 served by an index and no index is unnecessary**.
 
 - **Stack:** Node.js 18+, Express 5, MongoDB with Mongoose 9, JWT (`jsonwebtoken`), `bcryptjs`, `zod`
-- **Live API:** `<RENDER_URL>/api` &nbsp;·&nbsp; **Frontend:** `<VERCEL_URL>` &nbsp;·&nbsp; **Frontend repo:** `<FRONTEND_REPO_URL>`
+- **Live API:** `<RENDER_URL>/api` &nbsp;·&nbsp; **Frontend:** `<VERCEL_URL>` &nbsp;·&nbsp; **Frontend repo:** https://github.com/bazlur36/secure-notes-frontend
 
 ---
 
