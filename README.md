@@ -5,7 +5,7 @@ A REST API for a note-taking platform with JWT authentication, role-based access
 served by an index and no index is unnecessary**.
 
 - **Stack:** Node.js 18+, Express 5, MongoDB with Mongoose 9, JWT (`jsonwebtoken`), `bcryptjs`, `zod`
-- **Live API:** `<RENDER_URL>/api` &nbsp;·&nbsp; **Frontend:** `<VERCEL_URL>` &nbsp;·&nbsp; **Frontend repo:** https://github.com/bazlur36/secure-notes-frontend
+- **Live API:** https://secure-notes-frontend-lovat.vercel.app/api/health &nbsp;·&nbsp; **Frontend:** https://secure-notes-frontend-lovat.vercel.app &nbsp;·&nbsp; **Frontend repo:** https://github.com/bazlur36/secure-notes-frontend
 
 ---
 
@@ -298,6 +298,7 @@ Declared indexes:
 1. **New → Web Service**, then connect this repository.
 2. Set **Build command** to `npm install` and **Start command** to `npm start`.
 3. Set the environment variables `MONGO_URI`, `JWT_SECRET`, `NODE_ENV=production`, and `CORS_ORIGIN=https://<your-frontend>.vercel.app`.
+   (The live frontend proxies `/api/*` to Render through a Vercel rewrite, so browser calls are same-origin. The live API URL above goes through that proxy and runs on Render's free tier, so the first request after idle takes ~30–50 s.)
 4. Seed once from your machine with `MONGO_URI=<atlas uri> npm run seed`. Indexes are built automatically on startup, and `npm run sync-indexes` builds them explicitly.
 
 > Render's free tier sleeps after ~15 min of inactivity. The first request after that can take ~30–50 s.
